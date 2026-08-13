@@ -1,11 +1,10 @@
-# Railway SOCKS5 Proxy
+# Railway Dual Proxy (HTTP & SOCKS5)
 
-Lightweight SOCKS5 proxy built with `microsocks` for Railway deployment.
+- **SOCKS5 Port:**  (or  env)
+- **HTTP Port:**  (or  env)
 
-## Deploying on Railway
-
-1. Connect this repository to **Railway**.
-2. Under service settings (**Networking** tab), generate a **TCP Proxy** to expose the port.
-3. (Optional) Set environment variables for auth:
-   - `USER`: username
-   - `PASS`: password
+## Railway Setup
+1. Deploy repository.
+2. In Railway settings -> **Networking**, add two **TCP Proxies**:
+   - One pointing to port  (SOCKS5)
+   - One pointing to port  (HTTP)
